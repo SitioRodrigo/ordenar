@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ordenar nombres</title>
+</head>
+<body>
+    <center>
+        <h3 style="margin-top: 20px; margin-bottom: 20px;">
+            Lista de amigos en mi clase
+            </h3>
+
+            <div>
+                <span>1</span>
+                <input type="text" placeholder="Nombre amigo" id="nombre_amigo1">
+                <br>
+
+                <span>2</span>
+                <input type="text" placeholder="Nombre amigo" id="nombre_amigo2">
+                <br>
+
+                <span>3</span>
+                <input type="text" placeholder="Nombre amigo" id="nombre_amigo3">
+                <br>
+
+                <span>4</span>
+                <input type="text" placeholder="Nombre amigo" id="nombre_amigo4">
+                </div>
+
+                <button onclick="submit()" id="boton_enviar">
+                    Enviar
+                    </button>
+
+                    <div id="ver_nombre" style="font-weight: bold;">
+
+                        </div>
+
+                        <button onclick="sorting()" id="boton_ordenar">
+                            Ordenar
+                            </button>
+                            </center>
+
+                            <script>
+
+                                Nombre_alumno_array = [];
+
+                                function submit()
+                                {
+
+                                    var nombre_1 = document.getElementById("nombre_amigo1").value;
+                                    var nombre_2 = document.getElementById("nombre_amigo2").value;
+                                    var nombre_3 = document.getElementById("nombre_amigo3").value;
+                                    var nombre_4 = document.getElementById("nombre_amigo4").value;
+
+                                    Nombre_alumno_array.push(nombre_1);
+                                    Nombre_alumno_array.push(nombre_2);
+                                    Nombre_alumno_array.push(nombre_3);
+                                    Nombre_alumno_array.push(nombre_4);
+
+                                    console.log(Nombre_alumno_array);
+
+                                    document.getElementById("ver_nombre").innerHTML = Nombre_alumno_array;
+                                    document.getElementById("boton_enviar").style.display = "none";
+                                    document.getElementById("boton_ordenar").style.display = "inline-block";
+
+                               }
+
+                               function sorting()
+                               {
+                                  Nombre_alumno_array.sort();
+                                  console.log(Nombre_alumno_array);
+                                  document.getElementById("ver_nombre").innerHTML = Nombre_alumno_array;
+                                  
+                               } 
+
+                               </Script>
+
+    
+</body>
+</html>
